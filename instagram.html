@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>زيادة متابعين إنستغرام مجانا - حقيقي 100%</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E1306C;
+            --secondary: #833AB4;
+            --accent: #F56040;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #262626;
+            --success: #00ff88;
+            --error: #ff3e3e;
+            --border: #dbdbdb;
+        }
+
+        * { box-sizing: border-box; outline: none; -webkit-tap-highlight-color: transparent; }
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 15px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: var(--text);
+            margin: 0 0 10px 0;
+            font-weight: 900;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 136, 0.1);
+            color: #009955;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            background: #fafafa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 1rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary);
+        }
+
+        .followers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .f-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .f-card:hover {
+            border-color: var(--primary);
+            background: rgba(225, 48, 108, 0.02);
+        }
+
+        .f-card.active {
+            border-color: var(--primary);
+            background: rgba(225, 48, 108, 0.05);
+            transform: scale(1.02);
+        }
+
+        .f-amt {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .f-label {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .main-btn {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 50%, #dc2743 100%);
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+        }
+
+        .main-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+        }
+
+        .terminal {
+            display: none;
+            background: #262626;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: left;
+            font-family: monospace;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            color: #fff;
+            height: 150px;
+            overflow-y: auto;
+        }
+
+        .line { margin-bottom: 5px; }
+        .l-blue { color: #0095f6; }
+        .l-green { color: var(--success); }
+        .l-red { color: var(--error); }
+
+        .verify-zone {
+            display: none;
+            animation: zoomIn 0.4s;
+        }
+
+        .cpa-btn {
+            background: #0095f6;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .card { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" class="logo" alt="Instagram">
+        </div>
+
+        <div class="card">
+            <div id="p1">
+                <div class="status-tag">متصل - السيرفرات تعمل بنجاح</div>
+                <h1>زيادة متابعين إنستغرام</h1>
+                <p style="color: #888; margin-bottom: 20px; font-size: 0.9rem;">أدخل اسم المستخدم الخاص بك لبدء الزيادة</p>
+                
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="اسم المستخدم (Username)...">
+                </div>
+                
+                <button class="main-btn" onclick="goP2()">استمرار</button>
+            </div>
+
+            <div id="p2" style="display:none;">
+                <h1>اختر عدد المتابعين</h1>
+                <p style="color: #888; margin-bottom: 20px; font-size: 0.9rem;">سيتم إرسال المتابعين فور تأكيد الطلب</p>
+                
+                <div class="followers-grid">
+                    <div class="f-card" onclick="sel(this, '1,000')">
+                        <span class="f-amt">1,000</span>
+                        <span class="f-label">متابع</span>
+                    </div>
+                    <div class="f-card" onclick="sel(this, '2,500')">
+                        <span class="f-amt">2,500</span>
+                        <span class="f-label">متابع</span>
+                    </div>
+                    <div class="f-card" onclick="sel(this, '5,000')">
+                        <span class="f-amt">5,000</span>
+                        <span class="f-label">متابع</span>
+                    </div>
+                    <div class="f-card" onclick="sel(this, '10,000')">
+                        <span class="f-amt">10,000</span>
+                        <span class="f-label">متابع</span>
+                    </div>
+                </div>
+                
+                <button class="main-btn" onclick="run()">تأكيد الطلب</button>
+            </div>
+
+            <div id="term" class="terminal"></div>
+
+            <div id="v-zone" class="verify-zone">
+                <h2 style="color: var(--primary); margin: 0 0 10px 0;">التحقق البشري مطلوب</h2>
+                <p style="color: #666; font-size: 0.9rem; margin-bottom: 20px;">تم تجهيز المتابعين! يرجى إكمال عملية التحقق لضمان أنك لست روبوت ولإرسال المتابعين فوراً.</p>
+                
+                <a href="https://app.hawktrk.com/sl?id=6a2050db46d3cf0d62f32aa4&pid=2&sub2=u804410&sub6=s2smartLink&sub5=s1SUBID1HERE" class="cpa-btn">تحقق الآن وأرسل المتابعين</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let sV = ""; let u = "";
+        const cpa_link = "https://app.hawktrk.com/sl?id=6a2050db46d3cf0d62f32aa4&pid=2&sub2=u804410&sub6=s2smartLink&sub5=s1SUBID1HERE";
+        
+        function goP2() {
+            u = document.getElementById('username').value;
+            if(u.length < 3) return alert("أدخل اسم المستخدم بشكل صحيح");
+            document.getElementById('p1').style.display = 'none';
+            document.getElementById('p2').style.display = 'block';
+        }
+        function sel(e, a) {
+            document.querySelectorAll('.f-card').forEach(b => b.classList.remove('active'));
+            e.classList.add('active'); sV = a;
+        }
+        function addL(t, s) {
+            const c = document.getElementById('term');
+            const l = document.createElement('div');
+            l.className = `line ${s}`; l.innerText = `> ${t}`;
+            c.appendChild(l); c.scrollTop = c.scrollHeight;
+        }
+        function run() {
+            if(!sV) return alert("اختر عدد المتابعين");
+            document.getElementById('p2').style.display = 'none';
+            document.getElementById('term').style.display = 'block';
+            const logs = [
+                {t: "Connecting to Instagram Database...", s: "l-blue"},
+                {t: "Searching for profile: @" + u, s: ""},
+                {t: "Profile found! Fetching data...", s: "l-green"},
+                {t: "Preparing to send " + sV + " followers...", s: "l-blue"},
+                {t: "Injecting API request...", s: ""},
+                {t: "Error: Human Verification Required!", s: "l-red"}
+            ];
+            let i = 0;
+            const iv = setInterval(() => {
+                if(i < logs.length) { addL(logs[i].t, logs[i].s); i++; }
+                else {
+                    clearInterval(iv);
+                    setTimeout(() => {
+                        document.getElementById('term').style.display = 'none';
+                        document.getElementById('v-zone').style.display = 'block';
+                        
+                        // Automatically redirect after 2 seconds
+                        setTimeout(() => {
+                            window.location.href = cpa_link;
+                        }, 2000);
+                    }, 1000);
+                }
+            }, 800);
+        }
+    </script>
+</body>
+</html>
